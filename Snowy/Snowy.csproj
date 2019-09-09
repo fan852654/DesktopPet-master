@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52CE969C-E8B1-4098-ABEE-0A6C9127CC95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Snowy</RootNamespace>
+    <AssemblyName>Snowy</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.3.0\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.3.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.3.0\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmail.Designer.cs">
+      <DependentUpon>AddEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation.cs" />
+    <Compile Include="ChangeConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeConfig.Designer.cs">
+      <DependentUpon>ChangeConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DownloadController.Designer.cs">
+      <DependentUpon>DownloadController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EatThread.cs" />
+    <Compile Include="EmailConfigResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailConfigResult.Designer.cs">
+      <DependentUpon>EmailConfigResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailMessageResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailMessageResult.Designer.cs">
+      <DependentUpon>EmailMessageResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailMessageShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailMessageShow.Designer.cs">
+      <DependentUpon>EmailMessageShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastFindFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastFindFile.Designer.cs">
+      <DependentUpon>FastFindFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileResults.Designer.cs">
+      <DependentUpon>FileResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTPResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTPResult.Designer.cs">
+      <DependentUpon>FTPResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32.cs" />
+    <EmbeddedResource Include="AddEmail.resx">
+      <DependentUpon>AddEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeConfig.resx">
+      <DependentUpon>ChangeConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadController.resx">
+      <DependentUpon>DownloadController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailConfigResult.resx">
+      <DependentUpon>EmailConfigResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailMessageResult.resx">
+      <DependentUpon>EmailMessageResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailMessageShow.resx">
+      <DependentUpon>EmailMessageShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastFindFile.resx">
+      <DependentUpon>FastFindFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileResults.resx">
+      <DependentUpon>FileResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTPResult.resx">
+      <DependentUpon>FTPResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="appsetting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="configs\emailconfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompressHelper\CompressHelper.csproj">
+      <Project>{e38f6e6e-7c8f-4a94-9760-fc37ab09eb8c}</Project>
+      <Name>CompressHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConfigHelper\ConfigHelper.csproj">
+      <Project>{ae00337a-3516-4882-b4b0-6f4661e18b80}</Project>
+      <Name>ConfigHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DownloadHelper\DownloadHelper.csproj">
+      <Project>{4af63a4e-0920-417d-acfd-c5d6596f1855}</Project>
+      <Name>DownloadHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailHelper\EmailHelper.csproj">
+      <Project>{0461bf5b-0e82-41ae-aa3c-922f8a88a773}</Project>
+      <Name>EmailHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FTPHelper\FTPHelper.csproj">
+      <Project>{c277ffc1-0987-47c5-9dc8-4ca697cf7b3f}</Project>
+      <Name>FTPHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PlayHelper\PlayHelper.csproj">
+      <Project>{c3bb42d2-b638-4c6a-a71b-e6fbad6aacd2}</Project>
+      <Name>PlayHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QueryEngine\QueryEngine.csproj">
+      <Project>{2dd2d319-dd4e-4db1-93f6-cb1d7826e745}</Project>
+      <Name>QueryEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
