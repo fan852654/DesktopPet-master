@@ -41,6 +41,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -163,11 +167,47 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(154, 280);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(121, 21);
+            this.textBox4.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(71, 283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 12);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "监听端口：";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(154, 319);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(223, 21);
+            this.textBox5.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(35, 322);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(113, 12);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "默认文件存放位置：";
+            // 
             // ChangeConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 449);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
@@ -205,5 +245,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
     }
 }

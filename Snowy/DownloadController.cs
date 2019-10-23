@@ -12,6 +12,7 @@ namespace Snowy
     public partial class DownloadController : Form
     {
         NotifyIcon ni;
+        public ConfigHelper.ConfigHelper Config { get; set; }
         public DownloadController(NotifyIcon ni,string defpath)
         {
             InitializeComponent();
@@ -20,8 +21,8 @@ namespace Snowy
             this.ni = ni;
             if (string.IsNullOrEmpty(defpath) || !Directory.Exists(defpath))
             {
-                textBox3.Text = Environment.GetFolderPath(Environment.SpecialFolder.Programs); ;
-                textBox8.Text = Environment.GetFolderPath(Environment.SpecialFolder.Programs); ;
+                textBox3.Text = Config.GetConfig("DefDownloadSavePath", false) == null ? Environment.GetFolderPath(Environment.SpecialFolder.Programs) : Config.GetConfig("DefDownloadSavePath", false).ToString();
+                textBox8.Text = Config.GetConfig("DefDownloadSavePath", false) == null ? Environment.GetFolderPath(Environment.SpecialFolder.Programs) : Config.GetConfig("DefDownloadSavePath", false).ToString();
             }
             else
             {

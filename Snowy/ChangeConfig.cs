@@ -34,6 +34,8 @@ namespace Snowy
             textBox1.Text = Config.GetConfig("EatFileAllowType").ToString();
             textBox2.Text = Config.GetConfig("EatFileNotAllowType").ToString();
             textBox3.Text = Config.GetConfig("EatBetween").ToString();
+            textBox4.Text = Config.GetConfig("ListenPort").ToString();
+            textBox5.Text = Config.GetConfig("DefDownloadSavePath") == null ? Environment.GetFolderPath(Environment.SpecialFolder.Programs) : Config.GetConfig("DefDownloadSavePath").ToString();
             EatfileAllow = Config.GetConfig("EatPath").ToString();
         }
 
@@ -64,8 +66,38 @@ namespace Snowy
             Config.SetConfig(new KeyValuePair<string, object>("EatFileNotAllowType", textBox2.Text));
             Config.SetConfig(new KeyValuePair<string, object>("EatBetween", textBox3.Text));
             Config.SetConfig(new KeyValuePair<string, object>("EatPath", EatfileAllow));
+            Config.SetConfig(new KeyValuePair<string, object>("ListenPort", textBox4.Text));
+            DirectoryInfo dir = new DirectoryInfo(textBox5.Text);
+            if (!dir.Exists)
+            {
+                DialogResult dr = MessageBox.Show("路径不存在，是否尝试创建", "Error", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+                if (dr == DialogResult.Yes)
+                {
+                    try
+                    {
+                        dir.Create();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("创建失败,此项目将不会保存", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    Config.SetConfig(new KeyValuePair<string, object>("DefDownloadSavePath", textBox5.Text));
+                }
+                else if (dr == DialogResult.No)
+                {
+                    ;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                Config.SetConfig(new KeyValuePair<string, object>("DefDownloadSavePath", textBox5.Text));
+            }
             Config.SaveConfig();
-            MessageBox.Show("保存成功", "Warning", MessageBoxButtons.OK);
+            MessageBox.Show("保存成功", "Message", MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void Button3_Click(object sender, EventArgs e)

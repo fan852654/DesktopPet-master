@@ -4,5 +4,7 @@
   "EatFileNotAllowType": "",
   "EatPath": "C:\\Users\\ghost\\Desktop\\",
   "EatBetween": "3000",
-  "DownloadDefaultPath": ""
+  "DownloadDefaultPath": "",
+  "ListenPort": "8001",
+  "DefDownloadSavePath": ""
 }

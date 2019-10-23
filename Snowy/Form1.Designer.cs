@@ -51,12 +51,13 @@
             this.邮件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加邮箱配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改邮箱配置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.下载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrBlink = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tmrHit = new System.Windows.Forms.Timer(this.components);
             this.tmrSong = new System.Windows.Forms.Timer(this.components);
             this.tmrEat = new System.Windows.Forms.Timer(this.components);
-            this.下载ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.端口监听ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightClickMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,7 +173,8 @@
             this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件系统ToolStripMenuItem,
             this.邮件ToolStripMenuItem,
-            this.下载ToolStripMenuItem});
+            this.下载ToolStripMenuItem,
+            this.端口监听ToolStripMenuItem});
             this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.操作ToolStripMenuItem.Text = "操作";
@@ -223,6 +225,13 @@
             this.修改邮箱配置ToolStripMenuItem.Text = "修改邮箱配置";
             this.修改邮箱配置ToolStripMenuItem.Click += new System.EventHandler(this.修改邮箱配置ToolStripMenuItem_Click);
             // 
+            // 下载ToolStripMenuItem
+            // 
+            this.下载ToolStripMenuItem.Name = "下载ToolStripMenuItem";
+            this.下载ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.下载ToolStripMenuItem.Text = "下载管理器";
+            this.下载ToolStripMenuItem.Click += new System.EventHandler(this.下载ToolStripMenuItem_Click);
+            // 
             // tmrBlink
             // 
             this.tmrBlink.Tick += new System.EventHandler(this.tmrBlink_Tick);
@@ -246,12 +255,12 @@
             // 
             this.tmrEat.Tick += new System.EventHandler(this.TmrEat_Tick);
             // 
-            // 下载ToolStripMenuItem
+            // 端口监听ToolStripMenuItem
             // 
-            this.下载ToolStripMenuItem.Name = "下载ToolStripMenuItem";
-            this.下载ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.下载ToolStripMenuItem.Text = "下载管理器";
-            this.下载ToolStripMenuItem.Click += new System.EventHandler(this.下载ToolStripMenuItem_Click);
+            this.端口监听ToolStripMenuItem.Name = "端口监听ToolStripMenuItem";
+            this.端口监听ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.端口监听ToolStripMenuItem.Text = "端口监听";
+            this.端口监听ToolStripMenuItem.Click += new System.EventHandler(this.端口监听ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -305,6 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem 添加邮箱配置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 修改邮箱配置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 下载ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 端口监听ToolStripMenuItem;
     }
 }
 

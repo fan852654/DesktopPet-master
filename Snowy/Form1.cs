@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -504,7 +505,19 @@ namespace Snowy
         private void 下载ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DownloadController dc = new DownloadController(notifyIcon1,Config.GetConfig("DownloadDefaultPath",false).ToString());
+            dc.Config = Config;
             dc.Show();
+        }
+
+        private void 端口监听ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            if (!principal.IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                MessageBox.Show("请先进入设置提升权限", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
         }
     }
 }
